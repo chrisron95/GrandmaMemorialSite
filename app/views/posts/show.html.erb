@@ -10,5 +10,9 @@
   <%= @post.message %>
 </p>
 
+<% @post.images.each do |image| %>
+  <%= image_tag image %> <br />
+<% end %>
+
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
