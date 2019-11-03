@@ -1,3 +1,6 @@
 class Post < ApplicationRecord
-  attr_accessible :name, :message
+  attr_accessor :name, :message
+
+  validates :name,    :presence => true
+  validates :message, :presence => true
 end
